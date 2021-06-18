@@ -8,7 +8,7 @@ import {
 class Navigation extends React.Component {
     render() {
         return (
-            <Navbar>
+            <Navbar fixed="top">
                 <Navbar.Brand>
                     <Navbar.Item renderAs={Link} to="/">
                         <Image size="32x32" src="/photos/bionic-eye.svg" />
