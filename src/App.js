@@ -2,10 +2,11 @@ import React from "react";
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
-import Home from "./pages/Home/Home"
+import Navigation from "./Navigation";
+import Home from "./pages/Home/Home";
+import About from "./pages/About/About";
 import './App.css';
 
 class App extends React.Component {
@@ -15,21 +16,19 @@ class App extends React.Component {
         <Router>
           {/* Here bulma navbar components */}
           <div>
-            <nav>
-              <ul>
-                <li>
-                  <Link to="/">Home</Link>
-                </li>
-              </ul>
-            </nav>
-
+            <Navigation />
             <Switch>
+              <Route path="/about">
+                <About />
+              </Route>
               <Route path="/">
                 <Home />
               </Route>
             </Switch>
           </div>
         </Router>
+
+
       </div>
     );
   }
