@@ -14,7 +14,6 @@ class App extends React.Component {
     return (
       <div className="App">
         <Router>
-          {/* Here bulma navbar components */}
           <div>
             <Navigation />
             <Switch>
@@ -27,8 +26,6 @@ class App extends React.Component {
             </Switch>
           </div>
         </Router>
-
-
       </div>
     );
   }
