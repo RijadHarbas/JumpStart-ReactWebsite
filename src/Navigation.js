@@ -6,16 +6,33 @@ import {
 } from "react-bulma-components";
 
 class Navigation extends React.Component {
+
+    constructor(props) {
+        super(props)
+        this.state = { isActive: false }
+        this.toggleActive = this.toggleActive.bind(this);
+
+    }
+
+    toggleActive() {
+        this.setState({ isActive: !this.state.isActive });
+    }
     render() {
+
+        let className = "";
+        if (this.state.isActive) {
+            className = "is-active";
+        }
+
         return (
             <Navbar fixed="top">
                 <Navbar.Brand>
                     <Navbar.Item renderAs={Link} to="/">
                         <Image size="32x32" src="/photos/bionic-eye.svg" />
                     </Navbar.Item>
-                    <Navbar.Burger />
+                    <Navbar.Burger className={className} data-target="navbarMenu" onClick={this.toggleActive} />
                 </Navbar.Brand>
-                <Navbar.Menu>
+                <Navbar.Menu className={className} id="navbarMenu">
                     <Navbar.Container>
                         <Navbar.Item renderAs={Link} to="/">Home</Navbar.Item>
                         <Navbar.Item renderAs={Link} to="/about">About</Navbar.Item>
