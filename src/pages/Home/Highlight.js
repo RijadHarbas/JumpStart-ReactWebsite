@@ -7,10 +7,11 @@ class Highlight extends React.Component {
     render() {
         return (
             <Hero backgroundColor="info" size="fullheight" className="has-background">
-                <img alt="" class="hero-background" src="/photos/V.jpg" />
+                <img alt="" className="hero-background" src="/photos/V.jpg" />
                 <Hero.Body>
                     <Container>
-                        <Heading textColor="primary">CYBER PUNK</Heading>
+                        <Heading textColor="light" size="1" weight="bold">CYBER PUNK</Heading>
+                        <Heading textColor="light" subtitle="true" size="3" >The future is now</Heading>
                     </Container>
                 </Hero.Body>
             </Hero>
