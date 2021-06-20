@@ -25,7 +25,7 @@ class Navigation extends React.Component {
         }
 
         return (
-            <Navbar fixed="top">
+            <Navbar fixed="top" style={{ width: "100vw" }}>
                 <Navbar.Brand>
                     <Navbar.Item renderAs={Link} to="/">
                         <Image size="32x32" src="/photos/bionic-eye.svg" />
