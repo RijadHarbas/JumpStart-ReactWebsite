@@ -24,9 +24,6 @@ class PhotosCarousel extends React.Component {
         const images = [];
         const imgFolder = "/photos/main/";
         for (let i = 1; i < 6; i++) {
-            // let img = <div className={`item-${i}`} key={`${imgFolder}${i}.jpg`}>
-            //     <Image key={i} size="3by4" src={`${imgFolder}${i}.jpg`} />
-            // </div>
             let img = <Image key={`${imgFolder}${i}.jpg`} size="3by4" src={`${imgFolder}${i}.jpg`} />
             images.push(img);
         }
@@ -35,10 +32,9 @@ class PhotosCarousel extends React.Component {
 
 
     render() {
-        // TODO: Add media queries for screen sizes smaller than 640px
         const images = this.loadImages();
         return (
-            <div id="slider" className="carousel">
+            <div id="slider" className="carousel is-clipped">
                 {images}
             </div>
         )
