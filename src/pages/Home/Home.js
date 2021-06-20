@@ -26,7 +26,7 @@ class Home extends React.Component {
                                 <Heading textColor="dark" subtitle="true">I'll see you in Night City.</Heading>
                                 <Columns>
                                     <Columns.Column>
-                                        <iframe src="https://store.steampowered.com/widget/1091500/" frameborder="0" width="646" height="190"></iframe>
+                                        <iframe title="steamWidget" src="https://store.steampowered.com/widget/1091500/" frameborder="0" width="646" height="190"></iframe>
                                     </Columns.Column>
                                 </Columns>
                             </Columns.Column>
